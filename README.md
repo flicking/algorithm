@@ -6,7 +6,9 @@
 2.极客时间数据结构与算法课程题目
 
 题解参考：
-1.https://github.com/iostalks/Algorithms
+1.https://github.com/wangzheng0822/algo
+2.https://www.acwing.com/solution/leetcode/
+3.https://github.com/iostalks/Algorithms
 
 git使用：
 关联项目：https://www.cnblogs.com/eedc/p/6168430.html
