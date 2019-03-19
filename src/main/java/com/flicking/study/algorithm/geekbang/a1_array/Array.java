@@ -3,7 +3,7 @@ package com.flicking.study.algorithm.geekbang.a1_array;
 import java.util.ArrayList;
 
 /**
- * （整型）数组实现
+ * （整型）固定大小的数组实现，不支持扩容
  */
 public class Array {
 
@@ -29,11 +29,33 @@ public class Array {
 
     //插入
     public boolean insert(int index, int value){
-        ArrayList arrayList = new ArrayList();
+        if(count == n){
+            System.out.println("数组空间已满");
+            return false;
+        }
+        //支持尾部插入
+        if(index < 0 || index > count){
+            System.out.println("位置不合法");
+            return false;
+        }
+        for (int i = count; i > index; i--) {
+            data[i] = data[i-1];
+        }
+        data[index] = value;
+        count++;
+        return true;
     }
 
     //删除
-
-    //扩容
+    public boolean delete(int index){
+        if(index < 0 || index >= count){
+            return false;
+        }
+        for (int i = index+1; i < count; i--) {
+            data[i-1] = data[i];
+        }
+        count--;
+        return true;
+    }
 
 }
